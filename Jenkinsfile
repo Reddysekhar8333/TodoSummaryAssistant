@@ -31,7 +31,7 @@ pipeline {
             steps {
                 dir('Frontend/todo') {
                     sh 'CI=false npm run build'
-                    sh 'npm run build'
+                    sh 'CI=false npm run build'
                 }
             }
         }
