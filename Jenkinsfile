@@ -30,7 +30,7 @@ pipeline {
         stage('Frontend Build') {
             steps {
                 dir('Frontend/todo') {
-                    sh 'npm ci'
+                    sh 'CI=false npm run build'
                     sh 'npm run build'
                 }
             }
