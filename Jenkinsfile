@@ -2,6 +2,9 @@ pipeline {
     agent any
 
     environment {
+        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
+        PATH = "${JAVA_HOME}/bin:${env.PATH}"
+
         BACKEND_HOST  = '10.0.1.166'
         FRONTEND_HOST = '10.0.1.18'
         APP_DIR       = '/home/ubuntu/TodoSummaryAssistant'
